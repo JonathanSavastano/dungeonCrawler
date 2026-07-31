@@ -1,0 +1,14 @@
+/home/Jonjoe/Projects/consoleGame/cGame/bin/Debug/net10.0/cGame
+/home/Jonjoe/Projects/consoleGame/cGame/bin/Debug/net10.0/cGame.deps.json
+/home/Jonjoe/Projects/consoleGame/cGame/bin/Debug/net10.0/cGame.runtimeconfig.json
+/home/Jonjoe/Projects/consoleGame/cGame/bin/Debug/net10.0/cGame.dll
+/home/Jonjoe/Projects/consoleGame/cGame/bin/Debug/net10.0/cGame.pdb
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.GeneratedMSBuildEditorConfig.editorconfig
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.AssemblyInfoInputs.cache
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.AssemblyInfo.cs
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.csproj.CoreCompileInputs.cache
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.dll
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/refint/cGame.dll
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.pdb
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.genruntimeconfig.cache
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/ref/cGame.dll
