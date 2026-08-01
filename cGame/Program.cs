@@ -1,6 +1,7 @@
 ﻿Console.WriteLine("Choose your class: Wizard, Warrior, Rogue");
 string classChoice = Console.ReadLine()!.Trim().ToUpper();
 
+Console.WriteLine("What is your name, adventurer?");
 string characterName = (Console.ReadLine() ?? "Hero").Trim();
 
 PlayerCharacter? player = classChoice switch
@@ -50,27 +51,7 @@ while (alive)
         monster.DrawArt();
         Console.WriteLine($"A {monster.Name} blocks your way!");
 
-        bool fighting = false;
-        while (true)
-        {
-            Console.WriteLine("Do you want to (F)lee or (A)ttack?");
-            string encounterChoice = Console.ReadLine()!.Trim().ToUpper();
-
-            if (encounterChoice is "FLEE" or "F")
-            {
-                Console.WriteLine("You slip past the monster!");
-                break;
-            }
-
-            if (encounterChoice is "ATTACK" or "A")
-            {
-                fighting = true;
-                fought = true;
-                break;
-            }
-
-            Console.WriteLine("Invalid choice. Please choose Flee or Attack.");
-        }
+        bool fighting = true;
 
         if (fighting)
         {
@@ -106,6 +87,7 @@ while (alive)
                     if (rand.NextDouble() < 0.5)
                     {
                         Console.WriteLine("You successfully flee the battle!");
+                        fought = true;
                         break;
                     }
                     Console.WriteLine("You fail to flee! The monster gets a free hit!");
@@ -172,6 +154,7 @@ while (alive)
             {
                 monstersSlain++;
                 Console.WriteLine($"You have defeated {monster.Name}!");
+                fought = true;
             }
         }
     }
