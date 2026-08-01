@@ -1,6 +1,6 @@
 class Wizard : PlayerCharacter
 {
-    public Wizard(string name) : base(name, health: 80, level: 1, attack: 20)
+    public Wizard(string name) : base(name, health: 80, level: 1, attack: 30)
     {
     }
 
