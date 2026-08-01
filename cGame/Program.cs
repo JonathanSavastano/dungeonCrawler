@@ -36,6 +36,7 @@ while (alive)
     player.Stamina = player.MaxStamina;
 
     bool hasMonster = rand.NextDouble() < 0.45;
+    bool fought = false;
     if (hasMonster)
     {
         MonsterCharacter monster = rand.Next(3) switch
@@ -62,6 +63,7 @@ while (alive)
             if (encounterChoice is "ATTACK" or "A")
             {
                 fighting = true;
+                fought = true;
                 break;
             }
 
@@ -188,6 +190,13 @@ while (alive)
     if (!alive)
     {
         break;
+    }
+
+    if (fought)
+    {
+        Console.WriteLine();
+        room.Draw();
+        Console.WriteLine($"Exits: {string.Join(", ", room.Exits)}");
     }
 
     while (true)
