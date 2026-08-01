@@ -182,7 +182,7 @@ while (alive)
             else
             {
                 int before = player.Health;
-                player.Health = Math.Min(player.MaxHealth, player.Health + rand.Next(5, 16));
+                player.Health = Math.Min(player.MaxHealth, player.Health + rand.Next(10, 30));
                 Console.WriteLine($"You find a potion of health! You drink it and recover {player.Health - before} health. (Now at {player.Health}/{player.MaxHealth})");
             }
         }

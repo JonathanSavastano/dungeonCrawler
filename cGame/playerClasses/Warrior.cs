@@ -1,6 +1,6 @@
 class Warrior : PlayerCharacter
 {
-    public Warrior(string name) : base(name, health: 120, level: 1, attack: 15)
+    public Warrior(string name) : base(name, health: 120, level: 1, attack: 25)
     {
     }
 

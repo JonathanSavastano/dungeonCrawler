@@ -12,3 +12,4 @@
 /home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.pdb
 /home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.genruntimeconfig.cache
 /home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/ref/cGame.dll
+/home/Jonjoe/Projects/consoleGame/cGame/obj/Debug/net10.0/cGame.sourcelink.json

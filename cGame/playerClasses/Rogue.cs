@@ -1,6 +1,6 @@
 class Rogue : PlayerCharacter 
 {
-    public Rogue(string name) : base(name, health: 100, level: 1, attack: 10)
+    public Rogue(string name) : base(name, health: 100, level: 1, attack: 20)
     {
     }
 
