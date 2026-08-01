@@ -1,11 +1,13 @@
 ﻿Console.WriteLine("Choose your class: Wizard, Warrior, Rogue");
 string classChoice = Console.ReadLine()!.Trim().ToUpper();
 
+string characterName = (Console.ReadLine() ?? "Hero").Trim();
+
 PlayerCharacter? player = classChoice switch
 {
-    "WIZARD" => new Wizard("Gandalf"),
-    "WARRIOR" => new Warrior("Conan"),
-    "ROGUE" => new Rogue("Shadow"),
+    "WIZARD" => new Wizard(characterName),
+    "WARRIOR" => new Warrior(characterName),
+    "ROGUE" => new Rogue(characterName),
     _ => null
 };
 
