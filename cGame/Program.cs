@@ -175,16 +175,9 @@ while (alive)
     {
         if (rand.NextDouble() < 0.35)
         {
-            if (player.Health >= player.MaxHealth)
-            {
-                Console.WriteLine("You find a potion of health, but you are already at full health. You leave it behind.");
-            }
-            else
-            {
-                int before = player.Health;
-                player.Health = Math.Min(player.MaxHealth, player.Health + rand.Next(10, 30));
-                Console.WriteLine($"You find a potion of health! You drink it and recover {player.Health - before} health. (Now at {player.Health}/{player.MaxHealth})");
-            }
+            Item item = GetRandomItem(rand);
+            Console.WriteLine($"You find a {item.Name}!");
+            item.Use(player, rand);
         }
         else
         {
@@ -233,6 +226,14 @@ void MaybeWindUp(MonsterCharacter m, Random r)
         m.IsWindingUp = true;
         Console.WriteLine($"{m.WindUpMessage}");
     }
+}
+
+Item GetRandomItem(Random r)
+{
+    return r.Next(1) switch
+    {
+        _ => new Potion()
+    };
 }
 
 void PrintHealth(PlayerCharacter p, MonsterCharacter m)
