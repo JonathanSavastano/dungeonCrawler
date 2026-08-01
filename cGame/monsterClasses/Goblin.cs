@@ -2,6 +2,8 @@ class Goblin : MonsterCharacter
 {
     public override string WindUpMessage => $"{Name} the Goblin crouches low, ready to pounce...";
 
+    public override int XpValue => 40;
+
     public Goblin(string name) : base(name, level: 1, health: 50, attack: 10)
     {
     }

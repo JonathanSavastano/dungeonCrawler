@@ -155,6 +155,8 @@ while (alive)
                 monstersSlain++;
                 Console.WriteLine($"You have defeated {monster.Name}!");
                 fought = true;
+                Console.WriteLine($"You gained {monster.XpValue} XP!");
+                player.GainXP(monster.XpValue);
             }
         }
     }
@@ -210,6 +212,7 @@ while (alive)
 
 Console.WriteLine();
 Console.WriteLine("--- Game Over ---");
+Console.WriteLine($"Final level: {player.Level}");
 Console.WriteLine($"Rooms explored: {roomsExplored}");
 Console.WriteLine($"Monsters slain: {monstersSlain}");
 
@@ -232,5 +235,5 @@ Item GetRandomItem(Random r)
 
 void PrintHealth(PlayerCharacter p, MonsterCharacter m)
 {
-    Console.WriteLine($"Your health: {Math.Max(0, p.Health)} | Stamina: {p.Stamina} | {m.Name} health: {Math.Max(0, m.Health)}");
+    Console.WriteLine($"Level {p.Level} | XP: {p.XP} | Your health: {Math.Max(0, p.Health)} | Stamina: {p.Stamina} | {m.Name} health: {Math.Max(0, m.Health)}");
 }

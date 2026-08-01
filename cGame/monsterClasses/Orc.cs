@@ -2,6 +2,8 @@ class Orc : MonsterCharacter
 {
     public override string WindUpMessage => $"{Name} the Orc raises a jagged axe high above his head...";
 
+    public override int XpValue => 70;
+
     public Orc(string name) : base(name, level: 1, health: 75, attack: 15)
     {
     }

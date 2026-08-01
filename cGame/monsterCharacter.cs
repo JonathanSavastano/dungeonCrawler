@@ -16,6 +16,8 @@ class MonsterCharacter
 
     public virtual string WindUpMessage => $"{Name} winds up a heavy attack...";
 
+    public virtual int XpValue => 0;
+
     public virtual string[] Art => new string[]
     {
         @"    ___",
