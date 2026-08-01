@@ -153,10 +153,12 @@ while (alive)
             else if (monster.Health <= 0)
             {
                 monstersSlain++;
+                MaybeDropItem(rand, player);
                 Console.WriteLine($"You have defeated {monster.Name}!");
                 fought = true;
                 Console.WriteLine($"You gained {monster.XpValue} XP!");
                 player.GainXP(monster.XpValue);
+                
             }
         }
     }
@@ -164,9 +166,7 @@ while (alive)
     {
         if (rand.NextDouble() < 0.35)
         {
-            Item item = GetRandomItem(rand);
-            Console.WriteLine($"You find a {item.Name}!");
-            item.Use(player, rand);
+            MaybeDropItem(rand, player);
         }
         else
         {
@@ -231,6 +231,16 @@ Item GetRandomItem(Random r)
     {
         _ => new Potion()
     };
+}
+
+void MaybeDropItem(Random r, PlayerCharacter p)
+{
+    if (r.NextDouble() < 0.35)
+    {
+        Item item = GetRandomItem(r);
+        Console.WriteLine($"You find a {item.Name}!");
+        item.Use(p, r);
+    }
 }
 
 void PrintHealth(PlayerCharacter p, MonsterCharacter m)
